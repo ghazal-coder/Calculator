@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #6a4c93;
+    --secondary-color: #8ac6d1;
+    --accent-color: #ffb4a2;
+    --background-color: #e6e6ea;
+    --text-color: #36384c;
+    --button-text: #ffffff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    overflow: hidden;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: -20px -20px 15px -20px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close {
+    background-color: #ff5f56;
+}
+
+.minimize {
+    background-color: #ffbd2e;
+}
+
+.maximize {
+    background-color: #27c93f;
+}
+
+.title {
+    color: var(--button-text);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.display {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--button-text);
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.operator {
+    background-color: var(--accent-color);
+}
+
+.clear {
+    background-color: #ff9aa2;
+}
+
+.equal {
+    background-color: #b5ead7;
+    color: var(--text-color);
+}
+
+button:not(.operator):not(.clear):not(.equal) {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
